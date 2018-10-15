@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- 
+Project-02_04_02
+
+Author: Charley Tran
+Date: 10.10.18
+
+Paycheck.html 
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pay Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <!-- This is the CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html {
+            background-color: lightblue;
+        }
+
+        body {
+            display: block;
+            width: 50%;
+            padding: 2%;
+            margin: 10%;
+            background-color: cornsilk;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+        }
+
+        input.input {
+            width: 75%;
+            padding: 10px;
+            font-size: 2em;
+            border-style: solid;
+            border-color: goldenrod;
+            border-radius: 5px;
+            border-width: 2px;
+            margin-bottom: 5%;
+        }
+
+        input.buttons {
+            border-style: solid;
+            border-color: gray;
+            border-radius: 5px;
+            border-width: 2px;
+            width: 100px;
+            padding: 2%;
+            
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        #main {
+            display: block;
+            width: 50%;
+        }
+
+        #picture {
+            display: block;
+            width: 50%;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <!-- This creates a flex container -->
+    <div class="flex-container">
+        <div id="main">
+            <h1>Pay Check Calculator</h1><br>
+            <!-- This creates a form, and links it to the PHP script. -->
+            <form name="salary" action="Paycheck.php" method="post">
+                <h4>Hours Worked</strong>
+                </h4>
+                <input type="text" name="hoursWorked" value="" class="input">
+                <h4>Hourly Wage</h4>
+                <input type="text" name="hourlyWage" value="" class="input">
+                <br>
+                <br>
+                <input type="reset" value="Reset" class="buttons">
+                <input type="submit" value="Calculate" class="buttons">
+            </form>
+        </div>
+        <!-- This is a picture of a palm tree -->
+        <div id="picture">
+            <img src="palmtree.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -7,9 +7,10 @@
     <script src="modernizr.custom.65897.js"></script>
 </head>
 <body>
-    <!-- PHP starts here -->
 
+    <!-- PHP starts here -->
     <?php
+    // Global variables
         $showForm = true;
         $errorCount = 0;
         $sender = "";
@@ -17,6 +18,7 @@
         $subject = "";
         $message = "";
 
+        // Validation.
         function validateInput($data, $fieldName) {
             global $errorCount;
             if(empty($data)) {
@@ -29,7 +31,7 @@
             }
             return $retval;
         }
-
+        
         function validateEmail($data, $fieldName) {
             global $errorCount;
             if(empty($data)) {

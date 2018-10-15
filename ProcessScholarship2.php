@@ -23,8 +23,10 @@ ProcessScholarship2.php
 
     <!-- PHP Starts Here -->
     <?php
+        // Global Variable
         $errorCount = 0;
 
+        // Function for validation
         function displayRequired($fieldName) {
             echo "The field \"$fieldName\" is required!<br>\n";
         }
@@ -42,6 +44,7 @@ ProcessScholarship2.php
             return $retval;
         }
 
+        // Creates a function with html inside
         function redisplayForm($firstName, $lastName) {
     ?>
         <h2 style="text-align: center">Scholarship Form</h2>
@@ -57,6 +60,7 @@ ProcessScholarship2.php
         }
         $firstName = validateInput($_POST['fName'], "First Name");
         $lastName = validateInput($_POST['lName'], "Last Name");
+        // Checks for validation
         if($errorCount > 0) {
             echo "$errorCount error(s): Please re-enter the information below.<br>\n";
             redisplayForm($firstName, $lastName);

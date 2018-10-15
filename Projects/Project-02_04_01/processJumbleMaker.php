@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<!-- 
+Exercise-02_04_01
+
+Author: Charley Tran
+Date: 10.3.18
+
+processJumbleMaker.php
+-->
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,6 +33,7 @@
             global $errorCount;
             $retval = "";
 
+            // This checks to see if the input fields are empty or not.
             if(empty($data)) {
                 displayError($fieldName, "The field is required");
                 ++$errorCount;

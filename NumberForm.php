@@ -37,7 +37,7 @@ NumberForm.php
         }
         if($displayForm) {
             ?>
-
+            <!-- Creates a form -->
             <form name="numberForm" action="NumberForm.php" method="post">
                 <p>
                     Enter a number: <input type="text" name="number" value="<?php echo $number; ?>">
@@ -50,6 +50,7 @@ NumberForm.php
 
             <?php
         } else {
+            // Displays info
             echo "<p>Thank you for entering a number.</p>\n";
             echo "<p>Your number, $number, squared is " . ($number * $number) . ".</p>\n";
             echo "<p><a href= \"NumberForm.php\">Try again?</a></p>\n";
